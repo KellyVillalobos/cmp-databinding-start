@@ -9,7 +9,8 @@
       <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first Component</button>
      <app-server-element
        *ngFor="let serverElement of serverElements"
-     [srvElement]="serverElement">
+     [srvElement]="serverElement"
+     [name]="serverElement.name">
 
        <p>
          <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
